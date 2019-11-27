@@ -5,7 +5,12 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   context: __dirname + '/app',
-  entry: ['babel-polyfill', './index.js'],
+  entry: [
+    'babel-polyfill',
+    'react-hot-loader/patch',
+    'webpack/hot/only-dev-server',
+    './index.js',
+  ],
   module: {
     rules: [
       {
@@ -28,10 +33,13 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
     open: true,
-    hot: true,
+    hotOnly: true,
+    contentBase: '/dist',
+    publicPath: '/',
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin(),
     new HtmlWebpackPlugin({ template: './index.html' }),
     new MiniCssExtractPlugin({ filename: 'bundle.css' }),
   ],
