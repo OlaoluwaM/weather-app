@@ -9,31 +9,31 @@
   box-sizing: border-box;
 }
 
+html,
+body,
+#app {
+  width: 100vw;
+  height: 100vh;
+}
+
 body {
   margin: 0;
   padding: 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  /* background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%); */
-  background-image: radial-gradient(73% 147%, #eadfdf 59%, #ece2df 100%),
-    radial-gradient(
-      91% 146%,
-      rgba(255, 255, 255, 0.5) 47%,
-      rgba(0, 0, 0, 0.5) 100%
-    );
+  background-color: rgba(255, 245, 205, 0.8);
   background-blend-mode: screen;
 }
+
 ::-webkit-scrollbar-track {
-  background-image: radial-gradient(73% 147%, #eadfdf 59%, #ece2df 100%),
-    radial-gradient(
-      91% 146%,
-      rgba(255, 255, 255, 0.5) 47%,
-      rgba(0, 0, 0, 0.5) 100%
-    );
+  background-color: rgba(255, 245, 205, 0.8);
   background-blend-mode: screen;
 }
-/* background: #ece9e6;
-background: -webkit-linear-gradient(to top, #ffffff, #ece9e6);
-background: linear-gradient(to top, #ffffff, #ece9e6); */
-/* background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
- background-blend-mode: screen; */
+
+.sunset {
+  background-color: #ffe53b;
+  background-image: -webkit-linear-gradient(147deg, #ffe53b 0%, #ff2525 74%);
+  background-image: -moz-linear-gradient(147deg, #ffe53b 0%, #ff2525 74%);
+  background-image: -o-linear-gradient(147deg, #ffe53b 0%, #ff2525 74%);
+  background-image: linear-gradient(147deg, #ffe53b 0%, #ff2525 74%);
+}
